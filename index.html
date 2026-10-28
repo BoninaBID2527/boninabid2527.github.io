@@ -241,7 +241,7 @@
   .casi + .griglia:not(:empty) { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
   .tutti { margin: 2rem 0 0; }
 
-  /* Cosa ho imparato all'ITS */
+  /* Argomenti affrontati all'ITS */
   .aree { display: grid; gap: 1rem; list-style: none; margin: 0; padding: 0; }
   @media (min-width: 700px) {
     .aree { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -257,25 +257,6 @@
   .area--principale .area__titolo { font-size: clamp(1.5rem, 2.6vw, 2rem); font-stretch: 110%; }
   .area--principale .area__testo { color: var(--su-giallo); max-width: 52ch; }
   .area--principale .etichette li { background: #000; color: #FFF; border-color: #000; }
-
-  /* Riquadro: i progetti del corso */
-  .nota {
-    display: grid; gap: 1.25rem; margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    padding: 1.75rem; border: 2px solid var(--giallo); border-radius: 16px;
-  }
-  @media (min-width: 900px) {
-    .nota { grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 3rem; padding: 2.5rem; }
-  }
-  .nota__etichetta {
-    display: inline-block; margin: 0 0 .9rem; padding: .2rem .75rem; border-radius: 999px;
-    background: var(--giallo); color: var(--su-giallo); font-size: .8rem; font-weight: 700;
-  }
-  .nota__titolo { margin: 0; font-weight: 800; font-stretch: 110%; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.1; }
-  .nota__testo { display: flex; flex-direction: column; gap: 1rem; }
-  .nota__testo p { margin: 0; color: var(--su-scura-2); max-width: 60ch; }
-  .nota__testo .nota__lead { color: var(--su-scura); font-size: 1.125rem; font-weight: 600; }
-  .nota .link { color: var(--su-scura); }
-  .nota .link:hover { color: var(--su-giallo); }
 
   /* Percorso */
   .percorso { display: grid; gap: 3rem; }
@@ -351,7 +332,7 @@
           <p class="apertura__ruolo">Business Intelligence Developer in formazione.</p>
           <p class="apertura__intro">Sto imparando a trasformare i dati in report chiari e utili per chi deve prendere decisioni.</p>
           <div class="azioni">
-            <a class="pulsante pulsante--nero" id="pulsante-progetti" href="#its">Cosa ho imparato</a>
+            <a class="pulsante pulsante--nero" id="pulsante-progetti" href="#its">Argomenti dell'ITS</a>
             <a class="pulsante pulsante--contorno" data-email href="#">Scrivimi</a>
           </div>
         </div>
@@ -416,7 +397,7 @@
   <section class="sezione scuro" id="its" aria-labelledby="its-titolo">
     <div class="contenitore">
       <div class="sezione__testata">
-        <h2 class="sezione__titolo" id="its-titolo">Cosa ho imparato all'ITS</h2>
+        <h2 class="sezione__titolo" id="its-titolo">Argomenti affrontati all'ITS</h2>
         <p class="sezione__intro">Corso Business Intelligence Software Developer, ITS ICT Piemonte. Sto frequentando il primo anno.</p>
       </div>
       <ul class="aree">
@@ -446,16 +427,6 @@
           <ul class="etichette"><li>Machine learning</li><li>Finanza</li><li>Blockchain</li></ul>
         </li>
       </ul>
-      <div class="nota">
-        <div>
-          <p class="nota__etichetta">Formazione</p>
-          <h3 class="nota__titolo">I progetti del corso</h3>
-        </div>
-        <div class="nota__testo">
-          <p class="nota__lead">Durante il corso ho lavorato a progetti di Business Intelligence, cataloghi ed e-commerce.</p>
-          <p id="nota-github" hidden></p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -544,7 +515,7 @@
    ========================================================= */
 
 const contatti = {
-  email: "boninaa338@gmail.com",
+  email: "alessiobonina11@gmail.com",
   github: "https://github.com/BoninaBID2527",
   linkedin: ""   // es. "https://www.linkedin.com/in/tuo-profilo"
 };
@@ -778,9 +749,6 @@ if (contatti.github) {
   const tutti = document.getElementById("tutti");
   tutti.innerHTML = esterno(contatti.github, "Tutti i repository su GitHub", "link");
   tutti.hidden = false;
-  const nota = document.getElementById("nota-github");
-  nota.innerHTML = esterno(contatti.github, "Guarda i progetti su GitHub", "link");
-  nota.hidden = false;
 }
 
 // Contatti
